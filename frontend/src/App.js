@@ -5,14 +5,23 @@ import { useState } from 'react';
 
 
 function App() {
+  const UNSPLASH_KEY = process.env.REACT_APP_UNSPLASH;
   const [word, setWord] = useState('');
   
   const handleSearchSubmit = (e) =>{
     e.preventDefault();
-    console.log(word);
+    console.log(UNSPLASH_KEY);
+    fetch(`https://api.unsplash.com/photos/random/?query=${word}&client_id=${UNSPLASH_KEY}`)
+    .then((res) => res.json())
+    .then((data) =>{
+      console.log(data);
+    })
+    .catch((err) => {
+      console.log(err);
+    })
   }
 
-  console.log(word);
+  //console.log(process.env);
 
   return (
     <div className="App">
