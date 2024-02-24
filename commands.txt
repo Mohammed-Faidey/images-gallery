@@ -10,3 +10,9 @@ then write the configuration
         "javascriptreact"
     ]
 }
+
+__________________________________________________________________________
+
+8.4: Installing and Enabling Prettier ESLint Plugin
+$ npm install -D prettier eslint-config-prettier eslint-plugin-prettier
+
