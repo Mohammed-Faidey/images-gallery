@@ -1,0 +1,12 @@
+
+8.3: Configure ESLint Validation:
+Install the ESLint extinsion, and configure the ESLint from preferences-> settings -> workspace -> settings.json 
+then write the configuration
+
+{
+    "eslint.validate": [
+        "html",
+        "javascript",
+        "javascriptreact"
+    ]
+}
